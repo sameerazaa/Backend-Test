@@ -42,7 +42,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Serve static files from frontend build folder
+// app.use(express.static(path.join(__dirname, "../frontend/build")));
 app.use(express.static(path.join(__dirname, "../frontend/build")));
+
 
 app.get("/api/hello", (req, res) => {
   res.send("Hello from Express backend!");
